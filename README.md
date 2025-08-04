@@ -9,15 +9,16 @@ Learn how to clean and prepare raw data for Machine Learning models.
 
 <details>
 <summary><strong>🛠️ Tools Used</strong></summary>
-- Python  
-- Pandas  
-- NumPy  
-- Matplotlib & Seaborn  
+  
+  - Python
+  - Pandas
+  - NumPy
+  - Matplotlib & Seaborn  
 </details>
 
 <details>
 <summary><strong>🗂️ Dataset</strong></summary>
-Titanic Dataset – A classic dataset used for ML and data preprocessing tasks.
+Titanic Dataset - A classic dataset used for ML and data preprocessing tasks.
 </details>
 
 <details>
