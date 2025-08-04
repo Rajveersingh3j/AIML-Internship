@@ -1,5 +1,5 @@
 # AIML-Internship
-This is my Internship Repo for AI and ML
+This project is part of my ongoing internship in Artificial Intelligence and Machine Learning. 
 
 # 🧹 Day 1: Data Cleaning & Preprocessing
 
@@ -68,12 +68,3 @@ Titanic Dataset – A classic dataset used for ML and data preprocessing tasks.
 A clean and preprocessed version of the Titanic dataset, ready for model training.
 
 ---
-
-Let me know if you'd like me to add:
-
-* Code snippets
-* Dataset link
-* Colab badge
-* Next steps (like model training)
-
-I'd be happy to help you extend the README.
