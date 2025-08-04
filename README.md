@@ -1,7 +1,7 @@
 # AIML-Internship
 This project is part of my ongoing internship in Artificial Intelligence and Machine Learning. 
-
-# 🧹 Day 1: Data Cleaning & Preprocessing
+<details>
+  <summary># 🧹 Day 1: Data Cleaning & Preprocessing</summary>
 
 **Objective:**
 Learn how to clean and prepare raw data for Machine Learning models.
@@ -68,3 +68,5 @@ Titanic Dataset – A classic dataset used for ML and data preprocessing tasks.
 A clean and preprocessed version of the Titanic dataset, ready for model training.
 
 ---
+</details>
+
