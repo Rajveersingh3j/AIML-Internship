@@ -1,29 +1,16 @@
 # AIML-Internship
 This project is part of my ongoing internship in Artificial Intelligence and Machine Learning. 
-# 🧹 Task 1: Data Cleaning & Preprocessing
+<details> 
+<summary><strong>🧹 Day 1: Data Cleaning & Preprocessing</strong></summary><br>
 
-<details>
-<summary><strong>🎯 Objective</strong></summary>
+<strong>🎯 Objective: </strong>
 Learn how to clean and prepare raw data for Machine Learning models.
-</details>
 
-<details>
-<summary><strong>🛠️ Tools Used</strong></summary>
-  
-  - Python
-  - Pandas
-  - NumPy
-  - Matplotlib & Seaborn  
-</details>
+<strong>🛠️ Tools Used: </strong> Python, Pandas, NumPy, Matplotlib & Seaborn  
 
-<details>
-<summary><strong>🗂️ Dataset</strong></summary>
-Titanic Dataset - A classic dataset used for ML and data preprocessing tasks.
-</details>
+<strong>🗂️ Dataset: </strong> Titanic Dataset - A classic dataset used for ML and data preprocessing tasks.
 
-<details>
-<summary><strong>✅ Steps Covered</strong></summary>
-
+<strong>✅ Steps Covered: </strong>
 #### 1. Import the Dataset & Explore Basic Information
 - Load the dataset using `pandas`.
 - Display the first few rows.
@@ -46,19 +33,15 @@ Titanic Dataset - A classic dataset used for ML and data preprocessing tasks.
 #### 5. Visualize & Remove Outliers
 - Use **boxplots** to visualize outliers in numerical columns.
 - Remove outliers using the **IQR (Interquartile Range)** method.
-</details>
 
-<details>
-<summary><strong>📘 What I Learned</strong></summary>
+<strong>📘 What I Learned</strong>
 
 - Handling null and missing values.  
 - Encoding categorical variables.  
 - Feature scaling using standardization.  
 - Detecting and removing outliers.  
 - Building a clean dataset for machine learning.
-</details>
 
-<details>
-<summary><strong>📂 Output</strong></summary>
-A clean and preprocessed version of the Titanic dataset, ready for model training.
+<strong>📂 Output: </strong> A clean and preprocessed version of the Titanic dataset, ready for model training.
+
 </details>
