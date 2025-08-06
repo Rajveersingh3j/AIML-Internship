@@ -34,7 +34,7 @@ Learn how to clean and prepare raw data for Machine Learning models.
 - Use **boxplots** to visualize outliers in numerical columns.
 - Remove outliers using the **IQR (Interquartile Range)** method.
 
-<strong>📘 What I Learned</strong>
+<strong>📘 What I Learned: </strong>
 
 - Handling null and missing values.  
 - Encoding categorical variables.  
@@ -45,3 +45,45 @@ Learn how to clean and prepare raw data for Machine Learning models.
 <strong>📂 Output: </strong> A clean and preprocessed version of the Titanic dataset, ready for model training.
 
 </details>
+
+<details>
+<summary><strong># 📊 Task 2: Exploratory Data Analysis (EDA)</strong></summary>
+
+<strong>🎯 Objective: </strong> Understand the dataset using statistics and visualizations to uncover structure, trends, and potential issues.
+
+<strong>🛠️ Tools Used: </strong>Pandas, Matplotlib, Seaborn, Plotly  
+
+<strong>🗂️ Dataset: </strong> Titanic Dataset - A classic dataset used for ML and data preprocessing tasks.
+
+<strong>✅ Steps Covered: </strong>
+
+#### 1. Generate Summary Statistics
+- Use `df.describe()` to get mean, std, min, max, and quartiles.
+- Use `df.median()` and `df.mode()` for extra insight.
+
+#### 2. Visualize Numeric Features
+- Plot **histograms** to understand distributions.
+- Use **boxplots** to identify outliers.
+
+#### 3. Explore Feature Relationships
+- Create a **correlation matrix** with `sns.heatmap()`.
+- Use **Seaborn pairplots** for visualizing pairwise relationships.
+
+#### 4. Identify Patterns, Trends & Anomalies
+- Look for skewed distributions.
+- Detect unusual values or relationships.
+- Compare target (`Survived`) with features using grouped plots.
+
+#### 5. Make Feature-Level Inferences
+- Infer which features might impact the target.
+- Example: Higher survival rate among females or 1st class passengers.
+
+<strong>📘 What I Learned: </strong>
+
+- How to perform **descriptive statistical analysis**  
+- How to **visualize distributions and relationships**  
+- How to identify **correlations, trends, and anomalies**  
+- How to draw **basic insights** that guide feature engineering and modeling  
+
+</details>
+
