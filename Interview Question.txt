@@ -1,151 +1,210 @@
-Day 1:
- 1. What are the different types of missing data?
+---
 
-There are three main types of missing data:
+## 📊 Task 1: Data Preprocessing Interview Questions
 
- MCAR (Missing Completely at Random):
+### 1. What are the different types of missing data?
 
-   The missingness is completely random and has no relationship with any feature or variable.
-   Example: A sensor randomly fails to record temperature regardless of time or location.
+* **MCAR (Missing Completely at Random)**
 
- MAR (Missing at Random):
+  * Missingness is random and unrelated to any feature.
+  * *Example:* A sensor randomly fails to record temperature.
 
-   The missingness is related to observed data, but not the missing data itself.
-   Example: Income might be missing more often for younger people, but given the age, the missingness is random.
+* **MAR (Missing at Random)**
 
- MNAR (Missing Not at Random):
+  * Missingness is related to observed data, not the missing value itself.
+  * *Example:* Income might be missing more for younger individuals.
 
-   The missingness is related to the value of the missing data itself.
-   Example: People with high incomes might choose not to disclose their income.
+* **MNAR (Missing Not at Random)**
+
+  * Missingness is related to the value of the missing data.
+  * *Example:* People with high income may choose not to disclose it.
 
 ---
 
- 2. How do you handle categorical variables?
+### 2. How do you handle categorical variables?
 
-Common techniques:
+* **Label Encoding**
 
- Label Encoding:
+  * Assigns integer values to categories.
+  * Best for **ordinal data**.
+  * ⚠️ Risk of implying order for nominal features.
 
-   Assigns each category a unique integer.
-   Suitable for ordinal data (e.g., "Low" = 0, "Medium" = 1, "High" = 2).
-   Risk: Can mislead algorithms into thinking there's a numerical relationship when it's nominal.
+* **One-Hot Encoding**
 
- One-Hot Encoding:
+  * Converts categories into binary columns.
+  * Best for **nominal data**.
+  * ⚠️ Can cause high dimensionality.
 
-   Converts categories into binary columns.
-   Suitable for nominal data (e.g., color → red, blue, green).
-   Downside: Can lead to a high-dimensional dataset (curse of dimensionality).
+* **Frequency / Count Encoding**
 
- Frequency / Count Encoding:
+  * Replaces category with its frequency/count.
 
-   Replaces categories with the count or frequency of the category in the dataset.
+* **Target Encoding**
 
- Target Encoding:
-
-   Replaces each category with the mean of the target variable for that category.
-   Risk of overfitting; usually needs cross-validation or regularization.
+  * Replaces category with the mean of the target variable.
+  * ⚠️ Can lead to overfitting; use cross-validation or smoothing.
 
 ---
 
- 3. What is the difference between normalization and standardization?
+### 3. What is the difference between normalization and standardization?
 
- Normalization (Min-Max Scaling):
-
-   Scales values to a range of \[0, 1] or \[-1, 1].
-   Formula: $(x - \min(x)) / (\max(x) - \min(x))$
-   Sensitive to outliers.
-   Used when data doesn't follow a Gaussian distribution.
-
- Standardization (Z-score Scaling):
-
-   Centers the data around 0 with a standard deviation of 1.
-   Formula: $(x - \mu) / \sigma$
-   Less sensitive to outliers.
-   Preferred when features follow a normal distribution.
+| Feature               | Normalization             | Standardization                  |
+| --------------------- | ------------------------- | -------------------------------- |
+| Also called           | Min-Max Scaling           | Z-score Scaling                  |
+| Formula               | `(x - min) / (max - min)` | `(x - mean) / std`               |
+| Range                 | Scales data to \[0, 1]    | Centers data around 0 (mean = 0) |
+| Sensitive to outliers | Yes                       | Less sensitive                   |
+| Use case              | Non-Gaussian data         | Gaussian (normal) data           |
 
 ---
 
- 4. How do you detect outliers?
+### 4. How do you detect outliers?
 
-Several methods:
+* **Statistical Methods**:
 
- Statistical Methods:
+  * Z-Score: Values beyond ±3 std deviations
+  * IQR: Outside Q1 - 1.5×IQR or Q3 + 1.5×IQR
 
-   Z-score: Values beyond ±3 standard deviations are considered outliers.
-   IQR (Interquartile Range): Values below Q1 - 1.5×IQR or above Q3 + 1.5×IQR.
+* **Visualization**:
 
- Visualization:
+  * Boxplots, Histograms, Scatterplots
 
-   Boxplots, scatterplots, histograms.
+* **Model-Based**:
 
- Model-Based Methods:
+  * Isolation Forest, DBSCAN, One-Class SVM
 
-   Isolation Forest, DBSCAN, One-Class SVM.
+* **Domain Knowledge**:
 
- Domain Knowledge:
-
-   Use business rules or thresholds specific to the application.
+  * Business-specific rules
 
 ---
 
- 5. Why is preprocessing important in ML?
+### 5. Why is preprocessing important in ML?
 
- Improves Model Accuracy: Ensures data quality and consistency.
- Enables Convergence: Some algorithms require data in specific formats or distributions.
- Reduces Noise & Bias: Eliminates irrelevant or misleading information.
- Handles Missing/Imbalanced Data: Prevents biases or crashes during training.
- Speeds up Training: Removes unnecessary features and scales the data appropriately.
-
----
-
- 6. What is one-hot encoding vs label encoding?
-
-| Feature                          | One-Hot Encoding                    | Label Encoding               |
-| -------------------------------- | ----------------------------------- | ---------------------------- |
-| Converts                         | Category → multiple binary columns  | Category → numeric labels    |
-| Suitable for                     | Nominal data                        | Ordinal data                 |
-| Example ("Red", "Blue", "Green") | Red = \[1, 0, 0], Blue = \[0, 1, 0] | Red = 0, Blue = 1, Green = 2 |
-| Risk                             | High dimensionality                 | Misinterpreted order         |
+* Ensures **data quality and consistency**
+* Helps **model convergence**
+* Removes **noise and bias**
+* Deals with **missing or imbalanced data**
+* Reduces **training time**
 
 ---
 
- 7. How do you handle data imbalance?
+### 6. What is one-hot encoding vs label encoding?
 
-Techniques include:
-
- Resampling:
-
-   Oversampling (e.g., SMOTE): Duplicate or synthetically create minority class samples.
-   Undersampling: Reduce majority class samples.
-
- Change Performance Metrics:
-
-   Use metrics like F1-score, ROC-AUC, Precision-Recall instead of accuracy.
-
- Use Class Weights:
-
-   Many ML algorithms support weighting classes (e.g., `class_weight='balanced'` in scikit-learn).
-
- Ensemble Techniques:
-
-   Use specialized methods like Balanced Random Forest, EasyEnsemble.
+| Feature                           | One-Hot Encoding                   | Label Encoding           |
+| --------------------------------- | ---------------------------------- | ------------------------ |
+| Converts                          | Category → Binary columns          | Category → Numeric label |
+| Suitable for                      | Nominal data                       | Ordinal data             |
+| Example: ("Red", "Blue", "Green") | \[1, 0, 0], \[0, 1, 0], \[0, 0, 1] | 0, 1, 2                  |
+| Risk                              | High dimensionality                | Implied order            |
 
 ---
 
- 8. Can preprocessing affect model accuracy?
+### 7. How do you handle data imbalance?
 
-Absolutely. In fact, it's one of the most influential steps. Examples:
+* **Resampling**
 
- Poor preprocessing:
+  * Oversampling (SMOTE), Undersampling
 
-   Unscaled features may bias distance-based algorithms (e.g., KNN, SVM).
-   Missing values may crash models or skew results.
-   Unencoded categorical data can’t be used in most algorithms.
+* **Change Metrics**
 
- Good preprocessing:
+  * Use F1-score, ROC-AUC, PR curve
 
-   Makes learning easier and faster.
-   Enhances generalization and accuracy.
-   Reduces overfitting by cleaning noisy or irrelevant data.
+* **Class Weights**
+
+  * Use `class_weight='balanced'` in scikit-learn
+
+* **Ensemble Methods**
+
+  * Balanced Random Forest, EasyEnsemble
+
+---
+
+### 8. Can preprocessing affect model accuracy?
+
+**Yes!**
+Proper preprocessing can:
+
+* Prevent algorithm errors (e.g., due to missing values)
+* Improve learning and accuracy
+* Ensure proper feature scaling and encoding
+* Reduce noise and overfitting
+
+---
+
+## 📈 Task 2: Exploratory Data Analysis (EDA) Interview Questions
+
+### 1. What is the purpose of EDA?
+
+EDA helps in:
+
+* Understanding data distributions
+* Identifying outliers and missing values
+* Spotting trends and relationships
+* Preparing features for ML models
+
+---
+
+### 2. How do boxplots help in understanding a dataset?
+
+Boxplots:
+
+* Show median, quartiles, and spread
+* Highlight outliers visually
+* Allow comparison between groups
+* Indicate skewness
+
+---
+
+### 3. What is correlation and why is it useful?
+
+Correlation measures linear relationships between variables:
+
+* Detect redundant features
+* Select important features
+* Understand dependencies
+
+---
+
+### 4. How do you detect skewness in data?
+
+* Use `.skew()` method in Pandas
+* Visual tools: Histograms, KDE plots, Boxplots
+* Positive skew = right tail; Negative skew = left tail
+
+---
+
+### 5. What is multicollinearity?
+
+Occurs when features are highly correlated with each other:
+
+* Affects model coefficients
+* Reduces interpretability
+* Detect using correlation matrix or VIF (Variance Inflation Factor)
+
+---
+
+### 6. What tools do you use for EDA?
+
+* **Python libraries**: Pandas, NumPy, Matplotlib, Seaborn, Plotly
+* **EDA tools**: Sweetviz, Pandas Profiling, D-Tale
+* **BI tools**: Excel, Power BI, Tableau
+
+---
+
+### 7. Can you explain a time when EDA helped you find a problem?
+
+> "In a churn prediction project, EDA revealed a data error: tenure was incorrectly recorded in months instead of years. Boxplots exposed the anomaly. Fixing it significantly improved model performance."
+
+---
+
+### 8. What is the role of visualization in ML?
+
+Visualizations help in:
+
+* Understanding data (distribution, outliers, trends)
+* Feature selection & engineering
+* Model diagnostics (residuals, confusion matrix, ROC)
+* Communicating insights effectively
 
 ---
