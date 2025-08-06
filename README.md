@@ -47,7 +47,7 @@ Learn how to clean and prepare raw data for Machine Learning models.
 </details>
 
 <details>
-<summary><strong>📊 Task 2: Exploratory Data Analysis (EDA)</strong></summary>
+<summary><strong>📊 Task 2: Exploratory Data Analysis (EDA)</strong></summary><br>
 
 <strong>🎯 Objective: </strong> Understand the dataset using statistics and visualizations to uncover structure, trends, and potential issues.
 
