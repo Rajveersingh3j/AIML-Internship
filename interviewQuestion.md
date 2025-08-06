@@ -1,5 +1,3 @@
----
-
 ## 📊 Task 1: Data Preprocessing Interview Questions
 
 ### 1. What are the different types of missing data?
