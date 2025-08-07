@@ -1,7 +1,7 @@
 # AIML-Internship
 This project is part of my ongoing internship in Artificial Intelligence and Machine Learning. 
 <details> 
-<summary><strong>🧹 Day 1: Data Cleaning & Preprocessing</strong></summary><br>
+<summary><strong>🧹 Task 1: Data Cleaning & Preprocessing</strong></summary><br>
 
 <strong>🎯 Objective: </strong>
 Learn how to clean and prepare raw data for Machine Learning models.
