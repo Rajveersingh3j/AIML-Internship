@@ -87,3 +87,46 @@ Learn how to clean and prepare raw data for Machine Learning models.
 
 </details>
 
+<details> 
+<summary><strong> 🏡 Task 3: Linear Regression – Housing Price Prediction</strong></summary><br>
+
+<strong>🎯 Objective: </strong>Implement and understand both **simple** and **multiple linear regression** for predicting housing prices.
+
+<strong>🛠️ Tools Used: </strong>Scikit-learn, Pandas, Matplotlib  
+
+<strong>🗂️ Dataset: </strong> Housing Price Prediction Dataset - Used to build regression models for predicting property prices based on features like area, bedrooms, location, etc.
+
+<strong>✅ Steps Covered: </strong>
+
+#### 1. Import and Preprocess the Dataset
+- Load dataset using `pandas`
+- Handle missing values if any
+- Convert categorical features using encoding
+- Normalize or scale features if needed
+
+#### 2. Split Data into Train-Test Sets
+- Use `train_test_split` from `sklearn.model_selection`
+- Typical split: 80% train / 20% test
+
+#### 3. Fit Linear Regression Model
+- Use `sklearn.linear_model.LinearRegression`
+- Fit the model on training data
+
+#### 4. Evaluate the Model
+- Use common regression metrics:
+  - MAE (Mean Absolute Error)
+  - MSE (Mean Squared Error)
+  - R² Score (Coefficient of Determination)
+- Evaluate on test data
+
+#### 5. Plot Regression Line and Interpret Coefficients
+- For simple regression: plot line of best fit
+- Analyze coefficients to understand feature impact
+
+<strong>📘 What I Learned</strong>
+- How to implement **Simple** and **Multiple Linear Regression**  
+- How to use **scikit-learn** for model training  
+- How to evaluate model performance using **MAE, MSE, R²**  
+- How to visualize regression results and **interpret coefficients**  
+
+</details>
